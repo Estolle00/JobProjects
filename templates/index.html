@@ -1,0 +1,46 @@
+<html>
+    <header>
+        <title>Online Calculator</title>
+        <!-- Bootstrap scripts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </header>
+    <head>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Online Calculator</h1>
+                <p>Enter a calculation using two numbers. Valid operations are +, -, *, /.'</p>        
+            </div>
+        </div>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>Enter your calculation below: </p>
+                    <form method="POST">
+                        <input name="calc" style="border: 0; font-size: 300%;" autofocus>
+                        <br>
+                        <br>
+                        <input type="submit" class="btn btn-info">
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8" name="history">
+                    <h2>History</h2>
+                    <table class="table">
+                        <tbody>
+                        {% for h in hist %}
+                          <tr>
+                            <td>{{h}}</td>
+                          </tr>
+                        {% endfor %}
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+    </body>
+</html>
